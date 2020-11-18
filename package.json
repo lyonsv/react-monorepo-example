@@ -1,6 +1,14 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
+    "dev:web": "lerna run dev --scope @react-example/web --stream",
+    "dev:mobile": "lerna run start --scope @react-example/mobile --stream",
+    "start": "lerna run start --scope @react-example/web --stream",
+    "build": "lerna bootstrap && lerna run build --scope @react-example/web --stream"
+  },
   "devDependencies": {
     "lerna": "^3.20.2"
   }
