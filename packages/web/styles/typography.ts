@@ -6,6 +6,7 @@ interface Heading {
   typeface?: boolean
   accent?: boolean
   lowercase?: boolean
+  'data-testid'?: string
 }
 
 const headerStyles = css<Heading>`
@@ -16,22 +17,22 @@ const headerStyles = css<Heading>`
     props.light ? props.theme.colors.light : props.theme.colors.base};
 `
 
-const H1 = styled.h1`
+const H1 = styled.h1<Heading>`
   font-size: ${props => props.theme.fontScale.h1};
   ${headerStyles};
 `
 
-const H2 = styled.h2`
+const H2 = styled.h2<Heading>`
   font-size: ${props => props.theme.fontScale.h2};
   ${headerStyles};
 `
 
-const H3 = styled.h3`
+const H3 = styled.h3<Heading>`
   font-size: ${props => props.theme.fontScale.h3};
   ${headerStyles};
 `
 
-const H4 = styled.h4`
+const H4 = styled.h4<Heading>`
   font-size: ${props => props.theme.fontScale.h4};
   ${headerStyles};
 `
@@ -41,7 +42,7 @@ const H5 = styled.h5<Heading>`
   ${headerStyles};
 `
 
-const H6 = styled.h6`
+const H6 = styled.h6<Heading>`
   font-size: ${props => props.theme.fontScale.h6};
   ${headerStyles};
 `
