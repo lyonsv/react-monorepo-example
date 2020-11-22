@@ -3,17 +3,20 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "clean": "lerna clean",
-    "dev:web": "lerna run dev --scope @react-example/web --stream",
-    "dev:mobile": "lerna run start --scope @react-example/mobile --stream",
-    "start": "lerna run start --scope @react-example/web --stream",
     "build": "lerna bootstrap && lerna run build --scope @react-example/web --stream",
-    "test:web": "is-ci \"test:web:coverage\" \"test:web:watch\"",
-    "test:web:watch": "NODE_ENV=test jest --runInBand --watch --setupFiles dotenv/config",
-    "test:web:debug": "NODE_ENV=test node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --watch --setupFiles dotenv/config",
-    "test:web:coverage": "NODE_ENV=test jest --ci --runInBand --reporters=default --reporters=jest-junit --coverage --setupFiles dotenv/config",
+    "clean": "lerna clean",
+    "dev:mobile": "lerna run start --scope @react-example/mobile --stream",
+    "dev:mobile:android": "lerna run android --scope @thecurrency/mobile --stream",
+    "dev:mobile:ios": "lerna run ios --scope @thecurrency/mobile --stream",
+    "dev:web": "lerna run dev --scope @react-example/web --stream",
     "lint": "eslint --fix --ext .js packages/web/pages packages/web/components packages/web/hocs packages/web/services packages/ui/components packages/core/services packages/wordpress/hocs",
-    "lint:css": "stylelint './**/*.js'"
+    "lint:css": "stylelint './**/*.ts'",
+    "start": "lerna run start --scope @react-example/web --stream",
+    "test:mobile": "lerna run test --scope @thecurrency/mobile --stream",
+    "test:web": "is-ci \"test:web:coverage\" \"test:web:watch\"",
+    "test:web:coverage": "NODE_ENV=test jest --ci --runInBand --reporters=default --reporters=jest-junit --coverage --setupFiles dotenv/config",
+    "test:web:debug": "NODE_ENV=test node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --watch --setupFiles dotenv/config",
+    "test:web:watch": "NODE_ENV=test jest --runInBand --watch --setupFiles dotenv/config"
   },
   "dependencies": {
     "styled-components": "^5.2.0"
