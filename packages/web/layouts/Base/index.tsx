@@ -1,8 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
-import GlobalStyle from 'styles/global'
-import theme from 'styles/theme'
+import GlobalStyle from '@react-example/ui/styles/global'
+import theme from '@react-example/ui/styles/theme'
 
 type PageType = {
   title?: string

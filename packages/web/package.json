@@ -21,9 +21,12 @@
     "test:watch": "NODE_ENV=test jest --runInBand --watch --setupFiles dotenv/config"
   },
   "dependencies": {
+    "@react-example/ui": "^0.0.0",
     "apisauce": "^2.0.0",
     "dotenv": "^8.2.0",
     "next": "10.0.1",
+    "next-compose-plugins": "^2.2.1",
+    "next-transpile-modules": "^4.1.0",
     "polished": "^4.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",

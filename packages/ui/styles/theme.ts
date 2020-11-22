@@ -1,6 +1,6 @@
-import * as Colors from 'styles/colors'
-import * as Spacing from 'styles/spacing'
-import fontScale from 'styles/fontScale'
+import * as Colors from './colors'
+import * as Spacing from './spacing'
+import fontScale from './fontScale'
 
 interface Theme {
   colors: {

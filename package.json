@@ -22,6 +22,9 @@
     "testRegex": [
       "(\\.|/)(test|spec)\\.[jt]sx?$"
     ],
+    "transformIgnorePatterns": [
+      ".*(node_modules)(?!.*@react-example/ui.*).*$"
+    ],
     "moduleNameMapper": {
       "^@testing-library$": "<rootDir>/node_modules/@testing-library",
       "^react$": "<rootDir>/node_modules/react",

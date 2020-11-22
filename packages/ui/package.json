@@ -1,7 +1,4 @@
 {
   "name": "@react-example/ui",
-  "version": "0.0.0",
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
-  }
+  "version": "0.0.0"
 }
